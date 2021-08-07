@@ -1,0 +1,7 @@
+{{ $src := resources.GetMatch (.Destination) }}
+{{ $small := $src.Resize "800x" }}
+<figure><a href={{ $src.RelPermalink }}><img
+    src="{{ $src.RelPermalink }}" alt="{{ .Text }}"
+    {{ if ge $src.Width "800"}}srcset='{{ $small.RelPermalink }} 800w'{{ end }}/></a>
+    {{ if .Title }}<figcaption><h4>{{ .Title }}</h4></figcaption>{{ end }}
+</figure>

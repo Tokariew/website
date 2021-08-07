@@ -1,0 +1,53 @@
+baseUrl:             /
+title:               tokariew.xyz
+languageCode:        en_GB
+theme:               smol
+paginate:            8
+summaryLength:       64
+listPaginate:        16
+enableGitInfo: true
+params:
+    contentTypeName: posts
+    subtitle:        Thoughts of unorganized person
+    dateFmt:         2006-01-02 15:04
+
+frontmatter:
+  date:
+    - lastmod
+    - date
+    - :default
+
+taxonomies:
+  tag: tags
+
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+menu:
+    main:
+      - identifier:  posts
+        name:        Posts
+        url:         /posts
+        weight:      1
+      - identifier:  tags
+        name:        Tags
+        url:         /tags
+        weight:      3
+      - identifier:  about
+        name:        About
+        url:         /about
+        weight:      4
+      - identifier:  books
+        name:        Books
+        url:         /books
+    footer:
+      - identifier:  github
+        name:        Github
+        url:         https://github.com/tokariew
+      - identifier:  nextcloud
+        name:        Nextcloud
+        url:         /nextcloud
+

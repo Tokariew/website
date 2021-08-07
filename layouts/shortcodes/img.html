@@ -1,0 +1,27 @@
+{{ $src := resources.GetMatch (printf "*%s*" (.Get 0)) }}
+{{ $alt := .Get 1 }}
+
+{{ $tinyw := default "500x" }}
+{{ $smallw := default "800x" }}
+
+{{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
+{{ .Scratch.Set "small" ($src.Resize $smallw) }}
+
+
+{{ $tiny := .Scratch.Get "tiny" }}
+{{ $small := .Scratch.Get "small" }}
+
+{{/* only use images smaller than or equal to the src (original) image size */}}
+<figure><a href={{ $src.RelPermalink }}><img
+  srcset='
+  {{ if ge $src.Width "500" }}
+    {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+  {{ end }}
+  {{ if ge $src.Width "800" }}
+    {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+  {{ end }}'
+    src="{{ $src.RelPermalink }}"
+    alt="{{ $alt }}">
+</a>
+<figcaption><h4>{{ $alt }}</h4></figcaption>
+</figure>
