@@ -9,6 +9,7 @@ tags:
   - Rant
   - RCS
 draft: true
+
 ---
 This will be a little bit messy post. I will mostly rant how smartphones changed
 how software is designed nowadays, and how iritating it is for PC users.
