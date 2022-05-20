@@ -5,6 +5,7 @@ date: 2020-08-22T02:05:07+02:00
 url: /about/
 draft: false
 ---
+
 My name is Damian, but sometimes known as tokariew, I’m a little bit unorganized, going down into things that spark my interest… My somewhat constant interest, which I will try to write about are:
  - Python
  - LaTeX

@@ -1,7 +1,10 @@
 {{ $src := resources.GetMatch (.Destination) }}
 {{ $small := $src.Resize "800x" }}
+{{ $tiny := $src.Resize "600x" }}
 <figure><a href={{ $src.RelPermalink }}><img
     src="{{ $src.RelPermalink }}" alt="{{ .Text }}"
-    {{ if ge $src.Width "800"}}srcset='{{ $small.RelPermalink }} 800w'{{ end }}/></a>
+    {{ if ge $src.Width "600"}}srcset='{{ $tiny.RelPermalink }} 600w{{ if ge $src.Width "800"}},
+    {{ $small.RelPermalink }} 800w{{ end }}'
+    sizes="100vw"{{ end }}/></a>
     {{ if .Title }}<figcaption><h4>{{ .Title }}</h4></figcaption>{{ end }}
 </figure>

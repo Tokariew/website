@@ -1,15 +1,18 @@
-baseUrl:             /
+baseUrl:             https://tokariew.xyz
 title:               tokariew.xyz
-languageCode:        en_GB
+languageCode:        en-gb
 theme:               smol
-paginate:            8
-summaryLength:       64
+paginate:            16
+summaryLength:       48
 listPaginate:        16
 enableGitInfo: true
 params:
     contentTypeName: posts
     subtitle:        Thoughts of unorganized person
-    dateFmt:         2006-01-02 15:04
+    dateFmt:         2006-01-02
+
+author:
+  name: Tokariew
 
 frontmatter:
   date:
@@ -25,6 +28,22 @@ markup:
     endLevel: 3
     ordered: false
     startLevel: 2
+include_toc: true
+
+mediaTypes:
+  application/atom+xml:
+    suffixes:
+      - xml
+outputFormats:
+  Atom:
+    mediaType: application/atom+xml
+    baseName: atom
+    isPlainText: false
+
+outputs:
+  home:
+    - HTML
+    - Atom
 
 menu:
     main:
