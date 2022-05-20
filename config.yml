@@ -14,12 +14,6 @@ params:
 author:
   name: Tokariew
 
-frontmatter:
-  date:
-    - lastmod
-    - date
-    - :default
-
 taxonomies:
   tag: tags
 
