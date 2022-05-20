@@ -19,8 +19,11 @@ music without transcoding to my devices.
 
 My NAS is running Fedora Server Edition, so all instruction will be provided for this distro.
 
-So let start with installing the [MPD](https://www.musicpd.org/) which will
+So let start with installing the MPD[^1] which will
 serve as my music database, and NFS server which will allow me to stream music.
+
+[^1]: https://www.musicpd.org/
+
 
 ```bash
 sudo dnf install mpd nfs-utils
@@ -87,9 +90,15 @@ sudo systemctl enable --now rpcbind nfs-server
 ## Android Side
 
 For Android, we need two pieces of software which can be downloaded using
-[F-Droid](https://f-droid.org/) or Google Play Store. First is just MPD version
-for Android available [here](https://f-droid.org/en/packages/org.musicpd/) and
-second is [M.A.L.P](https://gitlab.com/gateship-one/malp/).
+F-Droid[^2] or Google Play Store. First is just MPD version
+for Android available here[^3] and
+second is M.A.L.P[^4].
+
+[^2]: https://f-droid.org/
+[^3]: https://f-droid.org/en/packages/org.musicpd/
+[^4]:  https://gitlab.com/gateship-one/malp/
+
+
 
 So let's start with configuring MPD on Android.
 
@@ -132,9 +141,10 @@ Few quirks with this setup:
    and will explain my setup in next tutorial.
  * In case that music collection is in lossless format, we will stream a lot of
    data to phone. So you can quickly run out of your data plan. In such case,
-   you can run [transcoding
-   server](https://github.com/jorams/transcoding-music-server) on NAS, and
+   you can run transcoding server[^5] on NAS, and
    slightly modify `music_directory` variable on `mpd.conf` on Android.
+
+[^5]: https://github.com/jorams/transcoding-music-server
 
 ## Other computers on network
 
@@ -167,8 +177,9 @@ And then start mpd.service
 systemctl --user start --now mpd.service
 ```
 
-As for client to control music playback you can use something like
-[mpc](https://musicpd.org/doc/mpc/html/),
-[ncmpcpp](https://rybczak.net/ncmpcpp/) or
-[cantata](https://github.com/cdrummond/cantata).
+As for client to control music playback you can use something like mpc[^6] ncmpcpp[^7] or cantata[^8]
 mpc is great if you try to script, or remap your media keys to control MPD playback.
+
+[^6]: https://musicpd.org/doc/mpc/html/
+[^7]: https://rybczak.net/ncmpcpp/
+[^8]: https://github.com/cdrummond/cantata
