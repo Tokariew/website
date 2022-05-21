@@ -22,6 +22,8 @@ markup:
     endLevel: 3
     ordered: false
     startLevel: 2
+  highlight:
+    lineNos: true
 include_toc: true
 
 mediaTypes:

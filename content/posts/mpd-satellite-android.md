@@ -39,7 +39,7 @@ nvim ~/.config/mpd/mpd.conf
 I tried to keep my config simple. With this config, we will never use it to
 play music, only have shared database between computers and Android.
 
-```properties
+```
 music_directory "/media/btrfs/Media/Music"
 playlist_directory "~/.local/share/mpd/playlists"
 db_file "~/.local/share/mpd/mpd.db"
@@ -81,7 +81,7 @@ In the file, I added single a share with read only permissions.
 
 Next, export NFS shares, and run it:
 
-```
+```bash
 sudo exportfs -rav
 sudo firewall-cmd --permanent --add-service={nfs3,mountd,rpc-bind}
 sudo systemctl enable --now rpcbind nfs-server
@@ -106,7 +106,7 @@ We need to create `mpd.conf` file in the base of Android folder. My NAS have
 static IP, which is `192.168.0.113`, so if you follow these guide, you will
 need to change it to IP of server with MPD.
 
-```properties
+```
 music_directory "nfs://192.168.0.113/media/btrfs/Media/Music"
 restore_paused "no"
 max_output_buffer_size "32768"
@@ -150,7 +150,7 @@ Few quirks with this setup:
 
 To access music on another computers, we will run MPD on them too, with following config:
 
-```properties
+```
 music_directory "nfs://192.168.0.113/media/btrfs/Media/Music"
 playlist_directory "~/.local/share/mpd/playlist"
 log_file "~/.local/share/mpd/mpd.log"
