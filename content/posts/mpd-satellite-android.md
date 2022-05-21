@@ -131,9 +131,9 @@ So now we will configure `M.A.L.P` to connect with. Basic configuration is
 quite simple, just adding name to the profile, and providing IP of server, in
 this case `127.0.0.1`.
 
-![add-profile](img/malp-profile.png "Click on plus to create new profile")
-![add-profile](img/malp-edit-profile.png "Simple profile for local running version")
-![add-profile](img/malp-folder.png "We can browse music base on folder structure")
+![add-profile](img/malp-profile.webp "Click on plus to create new profile")
+![add-profile](img/malp-edit-profile.webp "Simple profile for local running version")
+![add-profile](img/malp-folder.webp "We can browse music base on folder structure")
 
 Few quirks with this setup:
  * Can't access files from outside local network -- can be bypassed by
