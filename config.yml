@@ -10,6 +10,12 @@ params:
     contentTypeName: posts
     subtitle:        Thoughts of unorganized person
     dateFmt:         2006-01-02
+    comment:
+      set: true
+      repo: tokariew/website
+      issueterm: url
+      label: "[comment]"
+      theme: "dark-blue"
 
 author:
   name: Tokariew
@@ -65,4 +71,3 @@ menu:
       - identifier:  nextcloud
         name:        Nextcloud
         url:         /nextcloud
-
