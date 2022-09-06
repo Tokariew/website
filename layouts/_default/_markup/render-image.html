@@ -6,5 +6,5 @@
     {{ if ge $src.Width "600"}}srcset='{{ $tiny.RelPermalink }} 600w{{ if ge $src.Width "800"}},
     {{ $small.RelPermalink }} 800w{{ end }}'
     sizes="100vw"{{ end }}/></a>
-    {{ if .Title }}<figcaption><h4>{{ .Title }}</h4></figcaption>{{ end }}
+    {{ if .Title }}<figcaption><p class=title>{{ .Title }}</p></figcaption>{{ end }}
 </figure>
