@@ -71,3 +71,6 @@ menu:
       - identifier:  nextcloud
         name:        Nextcloud
         url:         /nextcloud
+
+enableRobotsTXT: true
+
