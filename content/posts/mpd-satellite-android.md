@@ -31,7 +31,7 @@ sudo dnf install mpd nfs-utils
 
 Next, I created base config for my MPD with:
 
-```bash
+``` BashSession
 mkdir -p ~/.config/mpd
 nvim ~/.config/mpd/mpd.conf
 ```
@@ -39,7 +39,7 @@ nvim ~/.config/mpd/mpd.conf
 I tried to keep my config simple. With this config, we will never use it to
 play music, only have shared database between computers and Android.
 
-```
+``` INI
 music_directory "/media/btrfs/Media/Music"
 playlist_directory "~/.local/share/mpd/playlists"
 db_file "~/.local/share/mpd/mpd.db"
@@ -54,7 +54,7 @@ input {
 
 For another devices to be able to connect with our MPD server, we will need to add firewall rule.
 
-```bash
+```BashSession
 sudo firewall-cmd --permanent --add-service mpd
 ```
 
