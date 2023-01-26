@@ -18,6 +18,6 @@ My name is Damian, but sometimes known as tokariew, I’m a little bit unorganiz
 In the past I had some fun designing number system for fantasy systems, writing short fictional biographies, designing own fountain pens, writing tools for p2m, modifying themes for vbulletin forums, moderating forums…
 
 ## Contact me
-Easiest way to talk to me will be with xmpp: tokariew ⓐⓣ jix.im
+Easiest way to talk to me will be with email: tokariew ⓐⓣ tokariew.xyz
 
 [^1]: https://www.tomenet.eu/
